@@ -141,6 +141,7 @@ def pdf_extract_pages(pdf_file, start, end):
   #   f.write(output_pdf.read())
   return output_pdf
 
+st.title("Flashcards Generator")
 
 #1. Upload pdf 
 pdf_file = st.file_uploader("Upload Textbook PDF", type="pdf")
@@ -173,4 +174,5 @@ if(pdf_file):
 
 if(st.session_state["is_generated"] == True):
     #6. Generate Flash Cards
+
     flashcards(st.session_state["json_qna"])
